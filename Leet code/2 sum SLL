@@ -51,7 +51,32 @@ class Solution:
             tail.next = ListNode(carry)
 
         return head
-            
+
+
+//explaination//
+1. Start carry at 0.
+2. Start an empty answer list.
+3. While either input list still has a node:
+      Get digit from l1 (or 0)
+      Get digit from l2 (or 0)
+
+      Add:
+          digit1 + digit2 + carry
+
+      Keep the last digit.
+      Save the remaining part as carry.
+
+      Create a new node with the digit.
+
+      Add that node to the answer list.
+
+      Move l1 forward.
+      Move l2 forward.
+
+4. If a carry is still left:
+      Add it as the final node.
+
+5. Return the first node of the answer.
 
               
 
